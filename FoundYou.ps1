@@ -71,5 +71,3 @@ Add-Type -AssemblyName System.Windows.Forms
 if ([System.Windows.Forms.Control]::IsKeyLocked('CapsLock')) {
     (New-Object -ComObject WScript.Shell).SendKeys('{CapsLock}')
 }
-
-# --- Jakoby's data-destruction block intentionally removed. No cleanup runs. ---
