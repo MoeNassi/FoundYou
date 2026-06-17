@@ -1,11 +1,3 @@
-# We-Found-You (SANITIZED) - geolocation scare prank
-# Based on the Jakoby payload logic. Lab use on machines you own / are authorized to test.
-#
-# KEPT:     full name lookup, geolocation, map open, max volume, creepy TTS
-# REMOVED:  the data-destruction block (rm %TEMP%, reg delete RunMRU,
-#           delete PowerShell history, Clear-RecycleBin). Nothing is wiped.
-# NOTE:     Location Services must be ON or Get-GeoLocation returns nothing.
-
 function Get-fullName {
     try {
         $fullName = Net User $Env:username | Select-String -Pattern "Full Name"
